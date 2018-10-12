@@ -17,7 +17,7 @@ public class MailServiceImpl  implements MailService {
 
 
     @Override
-    public String sendSimpleMail(String from, String to, String subject, String content) {
+    public boolean sendSimpleMail(String from, String to, String subject, String content) {
         SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
         simpleMailMessage.setFrom(from);
         simpleMailMessage.setTo(to);
@@ -27,9 +27,10 @@ public class MailServiceImpl  implements MailService {
         try {
             javaMailSender.send(simpleMailMessage);
             System.out.println("简单邮件已经发送。");
+            return true;
         } catch (Exception e) {
             System.out.println("发送邮件异常");
+            return false;
         }
-        return null;
     }
 }

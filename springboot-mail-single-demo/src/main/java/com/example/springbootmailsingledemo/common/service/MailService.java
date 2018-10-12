@@ -6,5 +6,5 @@ public interface MailService {
      * 发送简单的邮件
      * @return
      */
-    String sendSimpleMail(String from, String to, String subject, String content);
+    boolean sendSimpleMail(String from, String to, String subject, String content);
 }
