@@ -29,6 +29,7 @@ public class MailServiceImpl  implements MailService {
             System.out.println("简单邮件已经发送。");
             return true;
         } catch (Exception e) {
+            e.printStackTrace();
             System.out.println("发送邮件异常");
             return false;
         }
