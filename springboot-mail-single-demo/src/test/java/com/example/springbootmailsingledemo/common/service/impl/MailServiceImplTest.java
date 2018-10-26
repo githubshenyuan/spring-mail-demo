@@ -18,7 +18,7 @@ public class MailServiceImplTest {
     @Test
     public void sendSimpleMail() {
 
-        mailService.sendSimpleMail("xxxxxx@xxxxxx.com.cn", "xxxxx@xxxxx.com.cn",
+        mailService.sendSimpleMail("xxxxxxxxxxxx.com.cn", "xxxxxxxxxxxxxxx.com.cn",
                 "测试", "测试");
     }
 }
